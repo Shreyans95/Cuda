@@ -1,0 +1,5 @@
+nvcc --shared -o maxmul.dll maxmul.cu 
+g++ -shared -o maxmul_wrapper.dll maxmul_wrapper.cpp -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.2\include" -L. -lmaxmul
+go run maxmul.go
+
+Refer the example used from -> https://hackernoon.com/no-stress-cuda-programming-using-go-and-c-fy1y3agf
